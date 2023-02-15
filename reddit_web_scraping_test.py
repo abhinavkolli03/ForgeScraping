@@ -2,20 +2,20 @@ import praw
 import pandas as pd
 
 # Read-only instance
-reddit_read_only = praw.Reddit(client_id="",         # your client id
-                               client_secret="",      # your client secret
-                               user_agent="")        # your user agent
+reddit_read_only = praw.Reddit(client_id="omIBLzu_LMSI8biSbuJL7w",         # your client id
+                               client_secret="psbeJ8BdtXlhVRVTYe5qVum37Z13SQ",      # your client secret
+                               user_agent="siddhibansal9")        # your user agent
  
 # Authorized instance
-reddit_authorized = praw.Reddit(client_id="",         # your client id
-                                client_secret="",      # your client secret
-                                user_agent="",        # your user agent
-                                username="",        # your reddit username
-                                password="")        # your reddit password
+reddit_authorized = praw.Reddit(client_id="omIBLzu_LMSI8biSbuJL7w",         # your client id
+                                client_secret="psbeJ8BdtXlhVRVTYe5qVum37Z13SQ",      # your client secret
+                                user_agent="siddhibansal9",        # your user agent
+                                username="siddhibansal9",        # your reddit username
+                                password="Convergent@123")        # your reddit password
 
-reddit_read_only = praw.Reddit(client_id="",		 # your client id
-							client_secret="",	 # your client secret
-							user_agent="")	 # your user agent
+reddit_read_only = praw.Reddit(client_id="omIBLzu_LMSI8biSbuJL7w",		 # your client id
+							client_secret="psbeJ8BdtXlhVRVTYe5qVum37Z13SQ",	 # your client secret
+							user_agent="siddhibansal9")	 # your user agent
 
 
 subreddit = reddit_read_only.subreddit("redditdev")
@@ -34,7 +34,7 @@ for post in subreddit.hot(limit=5):
 	print(post.title)
 	print()
 
-posts = subreddit.top("month")
+posts = subreddit.top(time_filter="month")
 # Scraping the top posts of the current month
 
 posts_dict = {"Title": [], "Post Text": [],
